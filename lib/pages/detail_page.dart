@@ -1,5 +1,3 @@
-// lib/pages/detail_page.dart
-
 import 'package:flutter/material.dart';
 import '../models/movie.dart';
 
@@ -8,7 +6,6 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Ambil objek Movie yang dikirim melalui argumen navigasi
     final Movie movie = ModalRoute.of(context)!.settings.arguments as Movie;
 
     return Scaffold(
@@ -22,7 +19,6 @@ class DetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Poster Film
             Image.network(
               movie.fullPosterUrl,
               width: double.infinity,
@@ -34,7 +30,6 @@ class DetailPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Judul Film
                   Text(
                     movie.title,
                     style: const TextStyle(
@@ -43,7 +38,6 @@ class DetailPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 8),
-                  // Rating dan Tanggal Rilis
                   Row(
                     children: [
                       const Icon(Icons.star, color: Colors.amber, size: 20),
@@ -62,7 +56,6 @@ class DetailPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-                  // Sinopsis
                   const Text(
                     'Overview',
                     style: TextStyle(

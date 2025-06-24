@@ -1,5 +1,3 @@
-// lib/pages/home_page.dart
-
 import 'package:flutter/material.dart';
 import 'now_playing_page.dart';
 import 'popular_page.dart';
@@ -15,14 +13,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  // Daftar halaman yang akan ditampilkan
   static const List<Widget> _pages = <Widget>[
     NowPlayingPage(),
     PopularPage(),
     SearchPage(),
   ];
 
-  // Daftar judul untuk AppBar
   static const List<String> _pageTitles = <String>[
     'Now Playing',
     'Popular Movies',

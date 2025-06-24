@@ -1,5 +1,3 @@
-// lib/pages/popular_page.dart
-
 import 'package:flutter/material.dart';
 import '../api/tmdb_api.dart';
 import '../models/movie.dart';
@@ -18,7 +16,6 @@ class _PopularPageState extends State<PopularPage> {
   @override
   void initState() {
     super.initState();
-    // Perbedaannya di sini: memanggil getPopularMovies()
     _moviesFuture = TmdbApi().getPopularMovies();
   }
 

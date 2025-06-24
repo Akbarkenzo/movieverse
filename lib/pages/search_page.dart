@@ -1,5 +1,3 @@
-// lib/pages/search_page.dart
-
 import 'package:flutter/material.dart';
 import '../api/tmdb_api.dart';
 import '../models/movie.dart';
@@ -17,7 +15,6 @@ class _SearchPageState extends State<SearchPage> {
   Future<List<Movie>>? _moviesFuture;
 
   void _searchMovies(String query) {
-    // Panggil setState untuk memperbarui UI dengan Future baru
     setState(() {
       _moviesFuture = TmdbApi().searchMovies(query);
     });
@@ -72,7 +69,6 @@ class _SearchPageState extends State<SearchPage> {
           if (movies.isEmpty) {
             return const Center(child: Text('No movies found.'));
           }
-          // Tampilkan hasil pencarian dalam ListView
           return ListView.builder(
             itemCount: movies.length,
             itemBuilder: (context, index) {
